@@ -1,6 +1,7 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 import { useConfig } from 'nextra-theme-docs'
+import { Pre } from './components/pre'
 
 const config: DocsThemeConfig = {
   logo: (
@@ -26,6 +27,10 @@ const config: DocsThemeConfig = {
     { locale: 'fr', text: 'Français' },
     { locale: 'kr', text: '한국어' },
     { locale: `ca`, text: `Català` },
+    { locale: 'fi', text: 'Finnish' },
+    { locale: 'ru', text: 'Русский' },
+    { locale: 'de', text: 'Deutsch' },
+    { locale: 'ar', text: 'العربية' },
   ],
   head: function UseHead() {
     const { title } = useConfig()
@@ -57,7 +62,13 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/dair-ai/Prompt-Engineering-Guide/tree/main/',
   footer: {
-    text: 'Copyright © 2023 DAIR.AI',
+    text: 'Copyright © 2024 DAIR.AI',
+  },
+  search: {
+    placeholder: 'Search...',
+  },
+  components: {
+    pre: Pre,
   },
 }
 
